@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="buddyListApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="buddyListApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="buddyListApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="buddyListApp" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>My Buddy List App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css">
+  <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-plain.css">
+  <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css">
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
+<body ng-controller="buddyListCntrl">
+<h2>Buddies List</h2>
+<div>
+  <table class="buddies-table">
+  <tr>
+    <th><a href="" ng-click="sortOrder('userName')"> User Name</a></th>
+    <th><a href="" ng-click="sortOrder('firstName')">First Name</a></th>
+    <th><a href="" ng-click="sortOrder('lastName')">Last Name</a></th>
+    <th>Status</th>
+  </tr>
+  <tr ng-repeat-start="buddy in buddiesData | filter:searchText | orderBy:key:sortReverse">
+    <td> <a href="" ng-click="showDetailsView($index)">{{buddy.userName}}</a></td>
+    <td>{{buddy.firstName}}</td>
+    <td>{{buddy.lastName}}</td>
+    <td>{{buddy.status}}</td>
+    <td><button class="deleteButton" ng-click="removeBuddy(buddy)">Delete</button></td>
+  </tr>
+  <tr ng-repeat-end ng-show="currentIdx === $index">
+    <td colspan="4">
+      <div><b>Email:</b> {{buddy.email}}</div>
+      <div><b>DOB:</b> {{buddy.DOB}}</div>
+      <div ng-show="buddy.status === 'offline'">Last signin on {{buddy.lastSignIn}} </div>
+    </td>
+  </tr>
+  </table>
+  <div class="searchBlock">
+    <input class="searchTextBox" ng-model="searchText" type="text" placeholder="Search buddies here..." />
+  </div>
+  <div>
+    <button class="addBuddyButton" ng-click="openAddDialog()">Add</button>
+  </div>
+  </div>
+  <!-- In production:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/ngDialog/js/ngDialog.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+  
 </body>
 </html>

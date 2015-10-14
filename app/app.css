@@ -1,30 +1,60 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+html,body {
+  text-align: center;
 }
 
-.menu:before {
-  content: "[";
+.buddies-table {
+  margin: auto;
+  background-color: #aeabab;
+  box-shadow: 5px 5px 2px #D3D3D3;
+  line-height: 3em;
 }
 
-.menu:after {
-  content: "]";
+.buddies-table th{
+  font-weight: bold;
 }
 
-.menu > li {
-  display: inline;
+.deleteButton {
+  background: #FF0000;
+  border-radius: 7px;
+  cursor: pointer;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border: none;
+  color: #fff;
+}
+.addBuddyButton {
+  background: -webkit-linear-gradient(#0000FF, #4e4ef6);
+  background: -moz-linear-gradient(#0000FF, #4e4ef6);
+  border-radius: 15px;
+  border:none;
+  color: #fff;
+  line-height: 15px;
+  width: 10%;
+  cursor: pointer;
+}
+.searchBlock {
+  margin: 2% 0 2% 0;
+}
+.searchTextBox {
+  line-height: 15px;
+  width: 10%;
+  padding-left: 10px;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+input[type='text'] {
+  border-radius: 7px;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.addBuddyForm div:after {
+  content: "*";
+  color: red;
 }
+
+.addBuddyForm input.ng-invalid-required.ng-touched {
+  border: 1px solid red;
+}
+
+
+
