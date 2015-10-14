@@ -3,7 +3,7 @@ To set up this project in local environment
 
 ###Step-1: 
 Install node and npm from node.org
-###Srep-2:
+###Step-2:
 just do npm install
 
 Or much simpler do npm start that takes care of npm install as well as running the server
