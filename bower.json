@@ -1,8 +1,8 @@
 {
   "name": "angular-apple-challenge",
-  "description": "A starter project for Apple Interview",
+  "description": "A Buddies list",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/swapnaC/BuddyListRepo.git",
   "license": "MIT",
   "private": true,
   "dependencies": {

@@ -2,7 +2,7 @@
   "name": "angular-apple-challenge",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for Apple Interview",
+  "description": "A starter project for Interview",
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
