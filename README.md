@@ -1,7 +1,11 @@
-### Prerequisites
+To set up this project in local environment
 
-You need git to clone the angular-seed repository. You can get git from
-[http://git-scm.com/](http://git-scm.com/).
+###Step-1: 
+Install node and npm from node.org
+###Step-2:
+just do npm install
 
-We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
-its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+Or much simpler do npm start that takes care of npm install as well as running the server
+
+###Step-3:
+Go to http://localhost:8080/app/index.html in your browser

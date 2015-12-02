@@ -2,9 +2,8 @@
   "name": "angular-apple-challenge",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for Interview",
-  "repository": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "description": "A Buddies list for Interview",
+  "repository": "https://github.com/swapnaC/BuddyListRepo",
   "devDependencies": {
     "bower": "^1.3.1",
     "http-server": "^0.6.1",

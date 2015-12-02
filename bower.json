@@ -9,6 +9,6 @@
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
     "angular-loader": "~1.4.0",
-    "ngDialog": "0.5.1"
+    "ngDialog": "~0.5.1"
   }
 }
