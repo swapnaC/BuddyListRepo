@@ -10,15 +10,15 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css">
-  <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-plain.css">
   <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="app.css">
 </head>
 
 <body ng-controller="buddyListCntrl">
 <h2>Buddies List</h2>
 <div>
-  <table class="buddies-table">
+  <table class="table">
   <tr>
     <th><a href="" ng-click="sortOrder('userName')"> User Name</a></th>
     <th><a href="" ng-click="sortOrder('firstName')">First Name</a></th>
@@ -30,9 +30,9 @@
     <td>{{buddy.firstName}}</td>
     <td>{{buddy.lastName}}</td>
     <td>{{buddy.status}}</td>
-    <td><button class="deleteButton" ng-click="removeBuddy(buddy)">Delete</button></td>
+    <td><button class="btn btn-danger" ng-click="removeBuddy(buddy)">Delete</button></td>
   </tr>
-  <tr ng-repeat-end ng-show="currentIdx === $index">
+  <tr ng-repeat-end ng-show="currentIdx === $index && toggle">
     <td colspan="4">
       <div><b>Email:</b> {{buddy.email}}</div>
       <div><b>DOB:</b> {{buddy.DOB}}</div>
@@ -41,10 +41,10 @@
   </tr>
   </table>
   <div class="searchBlock">
-    <input class="searchTextBox" ng-model="searchText" type="text" placeholder="Search buddies here..." />
+    <input class="form-control" ng-model="searchText" type="text" placeholder="Search buddies here..." />
   </div>
   <div>
-    <button class="addBuddyButton" ng-click="openAddDialog()">Add</button>
+    <button class="btn btn-primary" ng-click="openAddDialog()">Want to add more buddies?</button>
   </div>
   </div>
 

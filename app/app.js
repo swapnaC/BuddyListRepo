@@ -18,11 +18,13 @@ angular.module('buddyListApp', ['ngDialog'])
           });
 
           scope.sortReverse = true;
+          scope.toggle = false;
           scope.sortOrder = function(sortType) {
             scope.key = sortType ? sortType : "userName";
             scope.sortReverse = !scope.sortReverse;
           }
           scope.showDetailsView = function(idx) {
+            scope.toggle = !scope.toggle;
             scope.currentIdx = idx;
           }
 

@@ -3,25 +3,25 @@
   <form role="form" class="addBuddyForm" name="buddyForm">
     <div>
       <label for="userName">User Name</label>
-      <input type="text" maxlength="10" name="userName" ng-model="user.userName" placeholder="User Name" required />
+      <input type="text" maxlength="10" name="userName" ng-model="user.userName" class="form-control" placeholder="User Name" required />
     </div>
     <div>
       <label for="firstName"> First Name</label>
-      <input type="text" ng-model="user.firstName" placeholder="First Name" required />
+      <input type="text" ng-model="user.firstName" class="form-control" placeholder="First Name" required />
     </div>
     <div>
       <label for="lastName">Last Name</label>
-      <input type="text" ng-model="user.lastName" placeholder="Last Name" required />
+      <input type="text" ng-model="user.lastName" class="form-control" placeholder="Last Name" required />
     </div>
     <div>
       <label for="userEmail">User Email</label>
-      <input type="email" ng-model="user.email" placeholder="Email" required />
+      <input type="email" ng-model="user.email" class="form-control" placeholder="Email" required />
     </div>
     <div>
       <label for="dob">Date Of Birth</label>
-      <input type="date" ng-model="user.DOB" placeholder="YYYY-MM-DD" required />
+      <input type="date" ng-model="user.DOB" class="form-control" placeholder="YYYY-MM-DD" required />
     </div>
   </form>
-  <button ng-click="addBuddy()" ng-disabled="buddyForm.$invalid">Submit</button>
+  <button ng-click="addBuddy()" class="btn btn-primary" ng-disabled="buddyForm.$invalid">Submit</button>
 </div>
 

@@ -1,5 +1,5 @@
 /* app css stylesheet */
-
+/*
 html,body {
   text-align: center;
 }
@@ -34,9 +34,12 @@ html,body {
   width: 10%;
   cursor: pointer;
 }
+*/
+
 .searchBlock {
   margin: 2% 0 2% 0;
 }
+/*
 .searchTextBox {
   line-height: 15px;
   width: 10%;
@@ -46,13 +49,17 @@ html,body {
 input[type='text'] {
   border-radius: 7px;
 }
-
-.addBuddyForm div:after {
+*/
+.addBuddyForm div {
+  margin-top: 3%;
+  width: 75%;
+}
+.addBuddyForm div:before {
   content: "*";
   color: red;
 }
 
-.addBuddyForm input.ng-invalid-required.ng-touched {
+input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
